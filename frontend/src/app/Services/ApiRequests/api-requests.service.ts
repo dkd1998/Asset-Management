@@ -36,9 +36,9 @@ export class ApiRequestsService {
     return this.http.post<any>(this.viewAssetsURL, data, this.options);
   }
 
-  // edit_asset(id: any , data: any){
-  //   return this.http.put<any>(this.viewAssetsURL+id+'/', data, this.options);
-  // }
+  edit_asset(id: number , data: any){
+     return this.http.put<any>(this.viewAssetsURL+id+'/', data, this.options);
+  }
 
 
   view_all_asset_requests(){
