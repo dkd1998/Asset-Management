@@ -1,0 +1,43 @@
+<div class="form d-flex align-items-center justify-content-center">
+    <form [formGroup]="signupForm">
+        <div class="main">
+            <div class="row">
+
+                <div class="header">
+                    <p>Create Account</p>
+                </div>
+
+                <div class="inputFields">
+                    <label for="name">Your name</label>
+                    <input type="text" class="form-control" formControlName="name" id="name" name="name"
+                        autocomplete="off" required>
+                    <small class="text-danger"
+                        [class.d-none]="name && (name.valid || name.untouched)">{{getNameError()}}</small>
+                </div>
+
+                <div class="inputFields">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" formControlName="email" id="email" name="email"
+                        autocomplete="off" required>
+                    <small class="text-danger"
+                        *ngIf="email && email.invalid && email.touched">{{getEmailError()}}</small>
+                </div>
+
+                <div class="inputFields">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" formControlName="password" id="password" name="password"
+                        placeholder="At least 6 characters" required>
+                    <small class="text-danger"
+                        [class.d-none]="password && (password.valid || password.untouched)">{{getPasswordError()}}</small>
+                </div>
+
+                <button class="btn btn-primary mt-3" type="submit" (click)="signup()" [disabled]=signupForm.invalid>Sign up</button>
+                <div class="bottomtext mt-3">
+                    <p>Already have an account? <a href="/signin">Sign in</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>

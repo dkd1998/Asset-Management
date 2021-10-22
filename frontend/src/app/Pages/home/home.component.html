@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div *ngIf="is_superuser==='true'">
+  <app-adminpanel></app-adminpanel>
+
+</div>
+
+<div *ngIf="is_superuser==='false'">
+  <app-userpanel></app-userpanel>
+</div>
+
+<div class="center back">
+  <p class="textDecoration">Solving What Matters !</p>
+</div>

@@ -1,0 +1,27 @@
+<app-header></app-header>
+<app-userpanel></app-userpanel>
+
+
+<div class="container mt-5">
+
+    <div class="inputForm">
+        <h1>Asset Request Form</h1>
+        <form class="form-inline" #asset="ngForm" (ngSubmit)="createAssetRequest(asset.value)">
+            <div class="form-group">
+                <label class="sr-only" for="inlineFormInputName2">Asset ID</label>
+                <input type="number" class="form-control mb-2 mr-sm-2" name="assetId" placeholder="Asset Name" ngModel>
+            </div>
+            <div>
+                <label class="sr-only" for="inlineFormInputName2">Employee ID</label>
+                <input type="number" class="form-control mb-2 mr-sm-2" name="employeeId" placeholder="Asset Quantity"
+                    ngModel>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="inlineFormInputName2">Description</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" name="description" placeholder="Description" ngModel>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+
+
+    </div>

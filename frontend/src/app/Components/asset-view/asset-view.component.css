@@ -1,0 +1,46 @@
+
+#tab {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tab td, #tab th {
+    border: 2px solid rgb(128, 128, 128,0.15);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #tab tr{
+    background-color: #f2f2f2;
+  }
+  
+  #tab tr:hover {background-color: #ddd;}
+  
+  #tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+    width: 20%;
+    
+  }
+  
+  
+  .inputForm label{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .inputForm{
+    background: #f2f2f2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .inputForm h1{
+    text-align: center;
+  }

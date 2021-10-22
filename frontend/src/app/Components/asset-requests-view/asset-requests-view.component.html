@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-adminpanel></app-adminpanel>
+<div class="container mt-5">
+  <table id="tab">
+    <tr>
+      <th scope="col">Sr. No.</th>
+      <th scope="col">Asset ID</th>
+      <th scope="col">Description</th>
+      <th scope="col">Employee ID</th>
+      <th scope="col">Request Status</th>
+      <th scope="col">Request Date</th>
+      <th scope="col">Update Date</th>
+      <th scope="col" style="width: 20%;">Actions</th>
+    </tr>
+
+    <tr *ngFor="let row of requests; let i=index" [ngClass]="(row.requestStatus=='Rejected')?'color1':'color2'">
+      <td>{{i+1}}</td>
+      <td *ngFor="let column of headers">
+        {{row[column]}}
+      </td>
+      <td>
+        <button class="btn btn-success" (click)="update_request(row,'approve',row.requestId)">Approve</button>
+        <button class="btn btn-danger" (click)="update_request(row,'remove',row.id) "
+          style="margin-left: 10px;">Reject</button>
+      </td>
+    </tr>
+  </table>
+</div>

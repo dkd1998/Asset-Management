@@ -1,0 +1,29 @@
+.header{
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background: rgb(0, 0, 0);
+}
+
+.header_top{
+    height: 60px;
+    font-size: 14px;
+    display: flex;
+    color: white;
+    width: 100%;
+   
+}
+
+
+.headerPart1{
+    flex: 4;
+    margin:10px 10px;
+}
+.headerPart2{
+ 
+    margin:15px 10px;
+    
+}
+.headerPart3{
+    margin:10px 10px;
+}

@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<app-adminpanel></app-adminpanel>
+<div class="container mt-5">
+<table id="tab">
+<tr>
+    <th scope="col" >Sr. No.</th>
+    <th scope="col" style="width: 50%;">User Name</th>
+    <th scope="col" >Actions</th>
+  </tr>
+<tr *ngFor = "let row of users; let i=index " [ngClass]="(row.is_active==0)?'color1':'color2'">
+    <td>{{i+1}}</td>
+    <td>
+        {{row.username}}
+    </td>
+    <td>
+        <button class="btn btn-success" (click)="update_user(row,'approve',row.requestId)">Approve</button>
+        <button  class="btn btn-danger"(click)="update_user(row,'remove',row.id)" style="margin-left: 20px;">Reject</button>
+        <button  class="btn btn-warning"(click)="update_user(row,'make admin',row.id)" style="margin-left: 20px;">Make Admin</button>
+      </td>
+  </tr>
+</table>
+</div>

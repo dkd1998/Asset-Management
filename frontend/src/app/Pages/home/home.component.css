@@ -1,0 +1,25 @@
+.back{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    background-image: url("../../../assets/background.jpg");
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.textDecoration{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    padding: 75px;    
+    background: rgb(255, 255, 255, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: -60px;
+    
+}

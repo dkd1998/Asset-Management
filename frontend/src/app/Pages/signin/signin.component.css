@@ -1,0 +1,22 @@
+.inputFields label{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.bottomtext p {
+    font-size: 20px;
+     
+} 
+.main{
+    max-width: 500px;
+    padding: 50px 50px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: white;
+    margin-top: 12.5em;
+}
+
+.header p {
+    font-size: 40px;
+    font-weight: 500;
+}
