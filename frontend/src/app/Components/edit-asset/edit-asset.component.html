@@ -1,0 +1,11 @@
+<form class="form-inline" #asset="ngForm" (ngSubmit)="editAsset(asset.value)">
+    <div class="form-group">
+        <label class="sr-only" for="inlineFormInputName2">Asset Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="name" placeholder="Asset Name" ngModel>
+    </div>
+    <div>
+        <label class="sr-only" for="inlineFormInputName2">Asset Quantity</label>
+        <input type="number" class="form-control mb-2 mr-sm-2" name="quantity" placeholder="Asset Quantity" ngModel>
+    </div>
+    <button type="submit" class="btn btn-success mb-2">Submit</button>
+  </form>

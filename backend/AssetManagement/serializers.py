@@ -52,3 +52,4 @@ class AssetRequestSerializer(serializers.ModelSerializer):
         model = AssetRequest
         fields = ('requestId', 'assetId', 'employeeId', 'description',
                   'requestStatus', 'requested_date', 'updated_date')
+        requested_date = serializers.DateTimeField(format='%Y')

@@ -25,6 +25,7 @@ import { CreateAssetRequestComponent } from './Components/create-asset-request/c
 import { AllUsersViewComponent } from './Components/all-users-view/all-users-view.component';
 import { AdminpanelComponent } from './Components/adminpanel/adminpanel.component';
 import { UserpanelComponent } from './Components/userpanel/userpanel.component';
+import { EditAssetComponent } from './Components/edit-asset/edit-asset.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { UserpanelComponent } from './Components/userpanel/userpanel.component';
     AllUsersViewComponent,
     AdminpanelComponent,
     UserpanelComponent,
+    EditAssetComponent,
     ],
   imports: [
     BrowserModule,

@@ -12,6 +12,8 @@ export class AssetViewComponent implements OnInit {
 
   constructor(public api: ApiRequestsService, private router: Router) { }
   assets: any = [];
+  rec:any;
+
   ngOnInit() {
     if (localStorage.getItem("is_active") == "true") {
       try {
@@ -73,9 +75,10 @@ export class AssetViewComponent implements OnInit {
     return localStorage.getItem("is_superuser");
   }
 
+  editClick(record: any){
+    this.rec=record;  
+  }
 }
-
-
 
 
 

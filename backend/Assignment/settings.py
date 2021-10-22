@@ -139,7 +139,8 @@ REST_FRAMEWORK = {
         # 'rest_framework.authentication.BasicAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
         'knox.auth.TokenAuthentication',
-    ]
+    ],
+    'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S"
 }
 
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
