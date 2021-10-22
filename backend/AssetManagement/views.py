@@ -52,6 +52,22 @@ def set_new_user_inactive(sender, instance, **kwargs):
 
 # ------------------------------------------------------x
 
+
+# once is_active is marked True only then the user will be able to login
+
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data
+        return Response({
+            "user": UserSerializer(user, context=self.get_serializer_context()).data,
+            "token": AuthToken.objects.create(user)[1]
+        })
+
+# ------------------------------------------------------x
 class ActivateUser(generics.GenericAPIView,
                    mixins.UpdateModelMixin,
                    mixins.DestroyModelMixin,
@@ -74,21 +90,6 @@ class ActivateUser(generics.GenericAPIView,
 
 # ------------------------------------------------------x
 
-# once is_active is marked True only then the user will be able to login
-
-class LoginAPIView(generics.GenericAPIView):
-    serializer_class = LoginSerializer
-
-    def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data
-        return Response({
-            "user": UserSerializer(user, context=self.get_serializer_context()).data,
-            "token": AuthToken.objects.create(user)[1]
-        })
-
-# ------------------------------------------------------x
 
 # all users can see assets
 
